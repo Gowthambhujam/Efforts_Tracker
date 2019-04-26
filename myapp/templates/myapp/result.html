@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>result</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,800" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+
+      <link rel="stylesheet" href="{% static "css/res_style.css" %}">
+
+  
+</head>
+
+<body>
+
+  <div class="primary-nav">
+
+	<button href="#" class="hamburger open-panel nav-toggle">
+<span class="screen-reader-text">Menu</span>
+</button>
+
+	<nav role="navigation" class="menu">
+
+		<a href="#" class="logotype">Tracker</a>
+
+		<div class="overflow-container">
+
+			<ul class="menu-dropdown">
+
+				<li><a href="effortsbreakdown">Efforts Breakdown</a><span class="icon"><i class="fa fa-dashboard"></i></span></li>
+
+				<li class="menu-hasdropdown">
+					<a href="defectreports">Defects Reports</a><span class="icon"><i class="fa fa-dashboard"></i></span>
+				</li>
+
+				<li><a href="testcasecreationandupdation">TestCase Creation and<br> Updation</a><span class="icon"><i class="fa fa-dashboard"></i></span></li>
+
+				<li><a href="testcaseexecution">TestCase Execution</a><span class="icon"><i class="fa fa-dashboard"></i></span></li>
+
+			</ul>
+
+		</div>
+
+	</nav>
+
+</div>
+
+<div class="new-wrapper">
+
+	<!-- <div id="main">
+
+		<div id="main-contents"> -->
+
+			<nav class="navbar navbar-default navbar-fixed-top" style="height: 75px;background:  white;">
+
+				<center><h2 style="margin-top: 15px;margin-left: 400px">Efforts Tracker</h2></center>
+    <ul class="nav navbar-nav navbar-right">
+              
+              <li class="dropdown" style="margin-right: 20px;margin-top: -15px;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">{{ user.email  }} <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                      <a href='index/'><button type="submit" class="btn btn-link btn-logout">Logout</button></a>
+                  </li>
+                </ul>
+                </li>
+      </ul>
+    </nav>
+
+		<!-- </div>
+
+	</div> -->
+	<br>
+	<br>
+	<form>
+	<div class="form-group"> <!-- Date input -->
+                       <label class="control-label" for="date">From</label>
+                       <input class="form-control" id="date" name="fromdate" placeholder="yyyy-mm-dd" type="text" required/>
+                    </div>
+     <div class="form-group"> <!-- Date input -->
+                       <label class="control-label" for="date">To</label>
+                       <input class="form-control" id="date" name="todate" placeholder="yyyy-mm-dd" type="text" required/>
+                    </div>
+<div>
+	<input type="submit" class='btn btn-primary' value="submit">
+</form>
+<div class="container">
+	{% block body_block %}
+
+
+	{% endblock %}
+	</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  <script>
+    $(document).ready(function(){
+      var date_input=$('input[name="fromdate"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'yyyy-mm-dd',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+</script>
+<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="todate"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'yyyy-mm-dd',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+</script>
+    <script  src="{% static "js/res_index.js" %}"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+<!-- Latest compiled and minified JavaScript -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="{% static "js/crudable.js" %}"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+
+<style type="text/css">body{padding-top:20px;padding-bottom:20px;font-family:'Amaranth';font-size:22px;font-weight:none;color:#000}table{border-spacing:40px}.bg{background-image:url(static/images/dash_back.jpg);height:auto;background-position:center;background-repeat:no-repeat;background-size:cover}.header,.marketing,.footer{padding-right:15px;padding-left:15px}.header{border-bottom:1px solid #e5e5e5}.header h3{padding-bottom:19px;margin-top:0;margin-bottom:0;line-height:40px}.navbar,.well{}.footer{padding-top:19px;color:#777;border-top:1px solid #e5e5e5}@media (min-width:768px){.container{max-width:730px}}.container-narrow &gt; hr {margin:30px 0}.jumbotron{text-align:center;border-bottom:1px solid #e5e5e5}.jumbotron .btn{padding:14px 24px;font-size:21px}.marketing{margin:40px 0}.marketing p+h4{margin-top:28px}input{border-collapse:collapse}label{font-family:'Amaranth';font-size:16px;font-weight:none;color:#000}#empid,#name{border:none;background:none;color:#00f;font-size:20px}@media screen and (min-width:768px){.header,.marketing,.footer{padding-right:0;padding-left:0}.header{margin-bottom:30px}.jumbotron{border-bottom:0}}label{font-family:'Amaranth';font-size:16px;font-weight:none;color:#000}.modal-body,.modal-header,.modal-footer,#l{font-family:'Amaranth';font-size:16px}.well{width:98%;opacity:.95}hr{height:12px;border:0;box-shadow:inset 0 12px 12px -12px rgba(0,0,0,.5)}.container{width:100%;-moz-transform:scale(.89);-webkit-transform:scale(.89)}#rmtask,#date{cursor:pointer}body::-webkit-scrollbar{width:.4em}body::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3)}body::-webkit-scrollbar-thumb{background-color:#a9a9a9;outline:1px solid #708090}#name,#priority{width:100%}#priority{width:65px}#testtype{width:130px}#billt{float:left;font-size:24px;padding-top:8px}#date{width:180px}#datefield{color:#00f;font-size:20px}</style>
+
+
+<script src="{% static "js/main.js" %}"></script> 
+     <script src="{% static "js/lc_switch.js" %}"></script>
+<link rel="stylesheet" href="{% static "css/lc_switch.css" %}">
+<script>$(document).ready(function(){for(var i=1;i<=29;i++)
+{$('#bill-'+i).lc_switch();$('#bill-'+i).lcs_on();}});</script>
+</head>
+<body class="bg">
+<nav class="navbar navbar-default navbar-fixed-top" style="height: 80px;background:  white;">
+  <script pagespeed_no_defer="" type="text/javascript">//<![CDATA[
+(function(){var g=this,h=function(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var l=function(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var m=function(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n,p=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},q=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e&&!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e.height&&c<=b.e.width)}a&&(b.a.push(e),b.d[e]=!0)};p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});var r=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.g&&(e="&rd="+encodeURIComponent(JSON.stringify(s())),131072>=a.length+e.length&&(a+=e),d=!0);t=a;if(d){c=b.f;b=b.h;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},s=function(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].k&&a.height>=b[e].j)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b},t="";h("pagespeed.CriticalImages.getBeaconData",function(){return t});
+//]]></script><img src="{% static "images/ef.jpg" %}" style="padding-top: 10px" height="75" width="75" pagespeed_url_hash="872776242" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></img> 
+
+      <center><h2 style="margin-top: -46px;">Efforts Tracker</h2></center>
+    <ul class="nav navbar-nav navbar-right">
+              
+              <li class="dropdown" style="margin-right: 20px;margin-top: -50px;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">{{ user.email  }} <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                      <a href='index/'><button type="submit" class="btn btn-link btn-logout">Logout</button></a>
+                  </li>
+                </ul>
+                </li>
+      </ul>
+    </nav>
+    <br><br><br><center>
+    <div class="well">
+     
+        
+  <div class="row">
+
+          <div class="col-sm-12">
+          <div class="row" align='left'> 
+              <div class="col-sm-12 form-group">
+                <label style='margin-left: -15px' class="col-sm-3">This tracking sheet is recording as part of </label>
+                 <div class="col-sm-3 input-group date" id='date'>
+
+                  <input type="text" id='datefield' class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                </div>
+                  
+            </div>
+            </div>
+
+            <div class="row" align='left'>
+              <div class="col-sm-2 form-group">
+                <label>Employee name:</label>
+                </div>
+                <div class="col-sm-4 form-group">
+                
+                <input type="text" id="name" placeholder="" value={{ user.first_name }} class="" disabled>
+                
+                </div>
+              <div class="col-sm-2 form-group">
+                <label>Employee Id:</label>
+                </div>
+                <div class="col-sm-4 form-group">
+                
+                <input type="text" id="empid" value={{ user.username }} placeholder="" class="" disabled>
+                
+                </div>
+                  
+            </div>
+              
+          <div class="row" align='left'>
+              <div class="col-sm-2 form-group">
+                <label>Project:</label>
+                </div>
+                <div class="col-sm-4 form-group">
+                <span data-toggle="tooltip" data-placement="right" title="select project here">
+                
+                <select name="project" id="project" class="form-control">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+
+                </span>
+              </div>    
+            </div>        <hr>
+              <form method="post" id="form" action="{% url 'dashboard' %}">
+              {% csrf_token %} 
+            <div class="row sections">
+            <div class='tccreation' style='display:none'>
+              <div><div style='float:left'><h2>Test Case Creation:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-1' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div><table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Hours</th><th>Description</th><th># of cases</th><th>Priority</th><th>IDs</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='tccreation'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noofcases' id='noofcases' placeholder=''></td><td><select class="form-control col-md-2" name="priority" id='priority' placeholder=""><option value='Critical'>P1
+              </option><option value='High'>P2</option><option value='Medium'>P3</option><option value='Low'>P4</option>
+               </select></td><td><input type='text' class='form-control col-md-2' name='ids' id='ids' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+            
+            <div class='tcupdation' style='display:none'>
+            <div><div style='float:left'><h2>Test Case updation:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-2' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+            <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Hours</th><th>Description</th><th># of cases</th><th>Priority</th><th>IDs</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='tcupdation'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noofcases' id='noofcases' placeholder=''></td><td><select class="form-control col-md-2" name="priority" id='priority' placeholder=""><option value='Critical'>P1
+              </option><option value='High'>P2</option><option value='Medium'>P3</option><option value='Low'>P4</option>
+               </select></td><td><input type='text' class='form-control col-md-2' name='ids' id='ids' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+            <div class='tcexecution' style='display:none'>
+              <div><div style='float:left'><h2>Test Case execution:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-3' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Test Type</th><th>Hours</th><th>Description</th><th># of cases</th><th>Priority</th><th>IDs</th><th>#of Pass</th><th>#of Fail</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='tcexecution'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><select class="form-control col-md-2" name="testtype" id='testtype' placeholder=""><option>Sanity
+              </option><option>Smoke</option><option>Regression</option><option>Functional</option><option>Exploratory</option><option>Compatibility</option>
+               </select></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noofcases' id='noofcases' placeholder=''></td><td><select class="form-control col-md-3" name="priority" id='priority' placeholder=""><option value='Critical'>P1
+              </option><option value='High'>P2</option><option value='Medium'>P3</option><option value='Low'>P4</option>
+               </select></td><td><input type='text' class='form-control col-md-2' name='ids' id='ids' placeholder=''></td><td><input type='text' class='form-control col-md-1' name='pass' id='pass' placeholder=''></td><td><input type='text' class='form-control col-md-1' name='fail' id='fail' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+            
+            <div class='defectreport' style='display:none'>
+              <div><div style='float:left'><h2>Defect Reporting:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-4' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Hours</th><th>Description</th><th># of Defects</th><th>Severity</th><th>IDs</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='defectreport'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noofdefects' id='noofdefects' placeholder=''></td><td><select class="form-control col-md-2" name="severity" id='severity' placeholder=""><option>Critical</option><option>High</option><option>Medium</option><option>Low</option>
+               </select></td><td><input type='text' class='form-control col-md-2' name='ids' id='ids' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='defectretest' style='display:none'>
+              <div><div style='float:left'><h2>Defect Retesting:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-5' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+               <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Hours</th><th>Description</th><th># of Defects</th><th># of Pass</th><th># of Fail</th><th>IDs</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='defectretest'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noofdefects' id='noofdefects' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noofpass' id='noofpass' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='nooffail' id='nooffail' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='ids' id='ids' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+          
+
+            <div class='kttraining' style='display:none'>
+             <div><div style='float:left'><h2>KT / Trainings:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-6' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+             <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Hours</th><th>Description</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='kttraining'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='requirements' style='display:none'>
+              <div><div style='float:left'><h2>Requirements / Specs Review:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-7' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Hours</th><th>Description</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='requirements'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='testenvironment' style='display:none'>
+              <div><div style='float:left'><h2>Test Environment Setup:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-8' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Hours</th><th>Description</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='testenvironment'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='projectmanagement' style='display:none'>
+              <div><div style='float:left'><h2>Project Management:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-9' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Task Type</th><th>Hours</th><th>Description</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='projectmanagement'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><select class="form-control col-md-2" name="tasktype" id='tasktype' placeholder=""><option>Task Review</option><option>Client Meetings</option><option>Internal Meetings</option><option>Defect Leakage</option><option>Defect Rejection</option><option>Reporting (Daily / Weekly / Other)</option><option>Test Planning</option><option>Test Estimation</option><option>Miscellaneous</option></select></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+           
+
+<!-- automation tasktypes -->
+
+            <div class='automationframework' style='display:none'>
+            <div><div style='float:left'><h2>Automation Framework Updation:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-10' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Product</th><th>Hours</th><th>Description</th><th>Tool</th><th>Framework/Language</th><th>Features Added/Modified</th><th>Commits</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='automationframework'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='product' id='product' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='tool' id='tool' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='framework' id='framework' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='feature' id='feature' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='commit' id='commit' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+              <div class='automationrandd' style='display:none'>
+              <div><div style='float:left'><h2>Automation Research & Development:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-11' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Product</th><th>Hours</th><th>Description</th><th>Area of Research</th><th>Topics Explored</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='automationrandd'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='product' id='product' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='research' id='research' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='topics' id='topics' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='automationtestdev' style='display:none'>
+              <div><div style='float:left'><h2>Automation Tests Development:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-12' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Product</th><th>Hours</th><th>Description</th><th># of Scripts Dev</th><th>Script IDs</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='automationtestdev'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='product' id='product' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noscripts' id='noscripts' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='scriptids' id='scriptids' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='automationtestexec' style='display:none'>
+              <div><div style='float:left'><h2>Automated Test Execution:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-13' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Product</th><th>Hours</th><th>Description</th><th># of Cases Run</th><th>Run Duration</th><th>Platform</th><th>Environment</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='automationtestexec'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='product' id='product' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='nocases' id='nocases' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='runduration' id='runduration' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='plat' id='plat' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='env' id='env' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='pass' id='pass' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='fail' id='fail' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='skip' id='skip' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+              <div class='automationtestmani' style='display:none'>
+              <div><div style='float:left'><h2>Automation Test Maintenance:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-14' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Product</th><th>Hours</th><th>Description</th><th># of Scripts Updated</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='automationtestmani'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='product' id='product' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noscripts' id='noscripts' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='automationfes' style='display:none'>
+             <div><div style='float:left'><h2>Automation Feasibility Study:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-15' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+             <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Product</th><th>Hours</th><th>Description</th><th>Tool</th><th>Framework/Language</th><th>Environment</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='automationfes'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='product' id='product' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='tool' id='tool' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='framework' id='framework' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='env' id='env' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='automationpeer' style='display:none'>
+            <div><div style='float:left'><h2>Peer to peer code review:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-16' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>      
+            <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Product</th><th>Hours</th><th>Description</th><th># of scripts Reviewed</th><th># of Suggestions  made</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='automationpeer'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='product' id='product' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='scripts' id='scripts' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='suggetions' id='suggetions' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+<!---- performance tasktypes -->
+            <div class='performancetcscript' style='display:none'>
+              <div><div style='float:left'><h2>PT-Test Script Development:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-17' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th># of scripts Dev</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='performancetcscript'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noofscripts' id='noofscripts' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='performancetcexec' style='display:none'>
+             <div><div style='float:left'><h2>PT-Test Script Execution:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-18' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+             <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th># of Tests Executed</th><th>Execution Type</th><th>Test Details</th><th>Run Duration</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='performancetcexec'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='nooftests' id='nooftests' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='executiontype' id='executiontype' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='testdetails' id='testdetails' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='runduration' id='runduration' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='performancetestreport' style='display:none'>
+              <div><div style='float:left'><h2>PLoad Test Report Creation:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-19' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='performancetestreport'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='performancetestload' style='display:none'>
+              <div><div style='float:left'><h2>Load Test Environment Creation:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-20' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='performancetestload'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='performancetestclient' style='display:none'>
+              <div><div style='float:left'><h2>Client Support:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-21' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='performancetestclient'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='performancerandd' style='display:none'>
+               <div><div style='float:left'><h2>Performance Research & Development:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-22' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Sprint</th><th>Module</th><th>Hours</th><th>Description</th><th>Area of Research</th><th>Topics Explored</th><th>Misc</th><th>Add</th><th>Delete</th></tr><tbody id='performancerandd'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='sprint' id='sprint' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='module' id='module' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder='ex:2.04'></td><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='research' id='research' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='topics' id='topics' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='misc' id='misc' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+<!---- security tasktypes -->
+
+            <div class='securityuserac' style='display:none'>
+                  <div><div style='float:left'><h2>Application Functionality / User Access Review:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-23' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+                <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='securityuserac'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='securitystratagy' style='display:none'>
+             <div><div style='float:left'><h2>Test Strategy and Attack Vector Planning :</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-24' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+             <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='securitystratagy'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+            <div class='securityvulnerable' style='display:none'>
+              <div><div style='float:left'><h2>Vulnerability Detection:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-25' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th># of Vulnerabilities found</th><th>Vulnerability Name</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='securityvulnerable'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noofvul' id='noofvul' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='vulname' id='vulname' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+      
+          <div class='securitypen' style='display:none'>
+
+            <div><div style='float:left'><h2>Vulnerability Exploitation / Penetration Testing:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-26' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+            <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th># of Vulnerabilities found</th><th>Vulnerability Name</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='securitypen'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='noofvul' id='noofvul' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='vulname' id='vulname' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+          
+            <div class='securityany' style='display:none'>
+               <div><div style='float:left'><h2>Analysis and Reporting:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-27' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th># of hours spent</th><th>Report Type</th><th>Status</th><th>Comments</th><th>Add</th><th>Delete</th></tr><tbody id='securityany'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='noofhrs' id='hours' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='report' id='report' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='status' id='status' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+      <!--Leave -->
+            <div class='leave' style='display:none'>
+              <div><div style='float:left'><h2>leave details:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-28' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Day</th><th>Comments</th></tr><tbody id='leave'><tr class='crudable'><td><select class='form-control col-md-2' name='noofhrs' id='hours1'><option value="4.50">Half Day</option><option value="9.00">Full Day</option></select></td><td><input type='text' class='form-control col-md-2' name='comments' id='comments' placeholder=''></td></tr></tbody></table>     
+            </div>
+      
+      <!-- Misc -->
+            <div class='misc' style='display:none'>
+               <div><div style='float:left'><h2>Miscellaneous:</h2></div><div style='float:right'><div style='float:left;margin: 20px 100px 0px 0px'>Billable  <input id='bill-29' type="checkbox"></div><div style="float:right;margin-right:20px"><h2 id='rmtask'><span class="glyphicon glyphicon-trash"></span></h2></div></div></div>
+              <table class='table table-striped'><tr style='color: #fff;background:#ac2925;'><th>Task Description</th><th>Hours</th><th>Add</th><th>Delete</th></tr><tbody id='misc'><tr class='crudable'><td><input type='text' class='form-control col-md-2' name='description' id='description' placeholder=''></td><td><input type='text' class='form-control col-md-2' name='hours' id='hours' placeholder=''></td><td> <div id='add' class='crudable-create btn btn-primary'> ADD </div> </td><td> <div id='delete' class='crudable-delete btn btn-danger'> DELETE </div> </td></tr></tbody></table>     
+            </div>
+
+
+
+          </div>
+
+            <div class="row">
+              <div class="col-sm-3 form-group">
+                
+              </div>
+                <div class="col-sm-4 form-group">
+               
+                <select name="task" id='task' class="form-control">
+                  <option id="four" value="4">Defect Reporting</option>
+                  <option id="one" value="1">Testcase Creation</option>
+                  <option id="two" value="2">Testcase Updation</option>
+                  <option id="three" value="3">Testcase Execution</option>
+
+                </select>
+                </div>
+               <div class="col-sm-2 form-group">
+               
+                <input type='button' class='btn btn-primary' id='addtask' value='Add Task'/> 
+               </div>
+            </div>     
+            <script type="text/javascript">
+            $(document).ready(function(){
+                                    $("#addtask").on("click", function(){
+                                        $("#project").attr("disabled", "disabled");
+                                        var task=$('#task').val();
+                                  if(task==1){
+                                    $('.tccreation').detach().appendTo('.sections').show();  
+                                  }
+                                  if(task==2){
+                                   $('.tcupdation').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==3){
+                                   $('.tcexecution').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==4){
+                                   $('.defectreport').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==5){
+                                   
+                                   $('.defectretest').detach().appendTo('.sections').show(); 
+                                  }
+
+                                  if(task==6){
+                                     $('.kttraining').detach().appendTo('.sections').show(); 
+                                   
+                                  }
+                                  if(task==7){
+                                     $('.requirements').detach().appendTo('.sections').show(); 
+                                   
+                                  }
+                                  if(task==8){
+                                     $('.testenvironment').detach().appendTo('.sections').show(); 
+                                  }
+
+                                  if(task==9){
+                                     $('.projectmanagement').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==10){
+                                    $('.automationframework').detach().appendTo('.sections').show();  
+                                  }
+                                  if(task==11){
+                                   $('.automationrandd').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==12){
+                                   $('.automationtestdev').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==13){
+                                   $('.automationtestexec').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==14){
+                                   
+                                   $('.automationtestmani').detach().appendTo('.sections').show(); 
+                                  }
+
+                                  if(task==15){
+                                     $('.automationfes').detach().appendTo('.sections').show(); 
+                                   
+                                  }
+                                  if(task==16){
+                                     $('.automationpeer').detach().appendTo('.sections').show(); 
+                                   
+                                  }
+                                  if(task==17){
+                                    $('.performancetcscript').detach().appendTo('.sections').show();  
+                                  }
+                                  if(task==18){
+                                   $('.performancetcexec').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==19){
+                                   $('.performancetestreport').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==20){
+                                   $('.performancetestload').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==21){
+                                   
+                                   $('.performancetestclient').detach().appendTo('.sections').show(); 
+                                  }
+
+                                  if(task==22){
+                                     $('.securityuserac').detach().appendTo('.sections').show(); 
+                                   
+                                  }
+                                  if(task==23){
+                                     $('.securitystratagy').detach().appendTo('.sections').show(); 
+                                   
+                                  }
+
+                                  if(task==24){
+                                     $('.securityvulnerable').detach().appendTo('.sections').show(); 
+                                  }
+
+                                  if(task==25){
+                                     $('.securitypen').detach().appendTo('.sections').show(); 
+                                  }
+                                  if(task==26){
+                                    $('.securityany').detach().appendTo('.sections').show();  
+                                  }
+                                  if(task==27){
+                                    $('.performancerandd').detach().appendTo('.sections').show();  
+                                  } 
+                                  if(task==28){
+                                    $('.leave').detach().appendTo('.sections').show();  
+                                  }
+                                   if(task==29){
+                                    $('.misc').detach().appendTo('.sections').show();  
+                                  }                                    
+                            }); 
+
+                           });
+                                </script>
+
+            <div class="row">
+              
+            <table class="table table-striped">
+               <tr style="color: blue;">
+
+              <th></th><th>Total Hours: <span id='total'></span></th><th></th><th></th><th></th><th></th><th></th>
+        </tr>
+              </table>
+          </div><div align='left'>
+          <input type="submit" value = 'submit' class="btn  btn-primary"/></button>        
+          </div>
+          </div>
+      </div>
+    </form>
+</div>
+</center>
+  <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" id="l">&times;</button>
+        <h4 class="modal-title" align='left'>Efforts Tracker</h4>
+      </div>
+      <div class="modal-body">
+        <p Style="color:green" align='left'>Your request has been successfully submitted.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" id="reload" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="myModal-1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" id="l">&times;</button>
+        <h4 class="modal-title" align='left'>Efforts Tracker</h4>
+      </div>
+      <div class="modal-body">
+        <p Style="color:red" align='left'>We didn't get your project details yet,Please contact Administrator</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" id="reload" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="myModalerror" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" id="l">&times;</button>
+        <h4 class="modal-title">Efforts Tracker</h4>
+      </div>
+      <div class="modal-body">
+        <p Style="color:red">Please enter hours value in Decimals(ex:2.45).</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</body>

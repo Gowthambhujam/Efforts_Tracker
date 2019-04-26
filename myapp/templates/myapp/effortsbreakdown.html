@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "myapp/result.html" %}
+{% load staticfiles %}
+{% block body_block %}
+	<h1>Efforts Breakdown</h1>
+	<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Efforts BreakDown</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+  
+  
+
+    <script  src="{% static "js/eff_index.js" %}"></script>
+
+
+
+
+</body>
+
+</html>
+
+{% endblock %}

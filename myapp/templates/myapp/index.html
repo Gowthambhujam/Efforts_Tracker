@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login or Register Form</title>
+  
+  
+  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+
+      <link rel="stylesheet" href="{% static "css/style.css" %}">
+
+  
+</head>
+
+<body>
+
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+          <ul class="tabs">
+            <li><a href="#" id="1">LOGIN</a></li>
+            <li><a href="#" id="2">SIGN UP</a></li>
+          </ul>
+      </div>
+      <div class="col-sm-12">
+        <div class="form row" id="login">
+          <div class="col-sm-12 container">
+            <form method="POST" action="{% url 'login' %}">
+              {% csrf_token %}
+             <div class="input">
+            <input class="main-form animated bounceInDown" type="text" name="email_login" placeholder=" EMPLOYEE ID"/>
+             </div>
+            <div class="input">
+            <input class="main-form animated bounceInDown" type="password" name="password" placeholder=" PASSWORD"/>
+             </div>
+            <div class="input">
+            <input class="main-form btn animated bounceInDown" type="submit" name="butn" value = "LOGIN"/>
+             </div>
+           </form>
+            <div class="input">
+              <label class="pull-right">
+                <a href="#" id="3" class="forget-password">Forgot password ?</a>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form row" id="register" style="display: none;">
+          <div class="col-sm-12 container">
+            <form id="form1" method="POST" action ={% url 'home' %}>
+            {% csrf_token %}
+            <div class="input">
+            <input class="main-form animated bounceInDown" type="text" name="username" placeholder="EMPLOYEE NAME"/>
+             </div>
+             <div class="input">
+            <input class="main-form animated bounceInDown" type="text" name="ID" placeholder="EMPLOYEE ID"/>
+             </div>
+             <div class="input">
+              <div class="input">
+            <input class="main-form animated bounceInDown" type="text" name="proj" placeholder="PROJECT NAME"/>
+             </div>
+            <input class="main-form animated bounceInDown" type="text" name="email" placeholder=" EMAIL ADDRESS"/>
+             </div>
+            <div class="input">
+            <input class="main-form animated bounceInDown" type="password" name="pass" placeholder=" PASSWORD"/>
+             </div>
+            <div class="input">
+            <input class="main-form btn animated bounceInDown" type="submit" name="signup" value = "SIGN UP"/>
+             </div>
+            </form>
+          </div>
+        </div>
+          <div class="form row" id="forgetP" style="display: none;">
+          <div class="col-sm-12 container">
+            <div class="input">
+                <p>To reset your password enter your email we'll send you a link to reset your password.</p>
+             </div>
+            <div class="input">
+            <input class="main-form animated bounceInDown" type="text" name="usrname" placeholder=" EMAIL ADDRESS"/>
+             </div>
+            <div class="input">
+            <input class="main-form btn reset animated bounceInDown" type="submit" name="" value="RESET PASSWORD"/>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+    <script  src="{% static "js/index.js" %}"></script>
+
+
+
+
+</body>
+
+</html>
